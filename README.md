@@ -1,6 +1,6 @@
 # kubernetes-command
 
-    # delete terminated pod but not deleted
+    # delete terminated pod but not deleted, should be force
      kubectl delete pod <PODNAME> --grace-period=0 --force --namespace <NAMESPACE>
     # delete all objects in specific namespace
         kubectl delete --all pods --namespace=foo
