@@ -13,3 +13,5 @@
         done
     # command for get all pods status not running
         kubectl get po -n longhorn-system | grep -v "Running" 
+    # command for check event
+        kubectl get events --sort-by=.metadata.creationTimestamp
