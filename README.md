@@ -15,3 +15,9 @@
         kubectl get po -n longhorn-system | grep -v "Running" 
     # command for check event
         kubectl get events --sort-by=.metadata.creationTimestamp
+    # Force delete
+        kubectl delete pod NAME --grace-period=0 --force
+        and
+        kubectl delete pod NAME --now
+
+
