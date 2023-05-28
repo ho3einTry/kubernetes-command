@@ -19,5 +19,9 @@
         kubectl delete pod NAME --grace-period=0 --force
         and
         kubectl delete pod NAME --now
+     # Force Delete PVC
+         kubectl patch pvc jhooq-pv-claim -p '{"metadata":{"finalizers":null}}'
+         and 
+         kubectl delete pvc jhooq-pv-claim
 
 
